@@ -1,0 +1,76 @@
+//THE DATA FACTORY BRAND COLOURS
+//Primary Colours
+$purple:          rgb(74,46,134);
+$red:             rgb(236,40,75);
+$orange:          rgb(242,113,35);
+$light-orange:    rgb(249,169,24);
+// $blue:            #000066;
+
+
+//Seondary Colours
+$dark-grey:       #333333;
+$grey:            #999999;
+$light-grey:      #CCCCCC;
+$mid-grey:        #808080;
+$bgd-grey:        #E8E8E8;
+
+$border-blue:     #666699;
+$white:           #FFFFFF;
+$white-smoke:     #F5F5F5;
+
+//ALERTS AND WARNINGS
+$alert-red:       #cc0000;
+$alert-green:     #009933;
+$alert-blue:      #0000ff;
+$alert-yellow:    #ffcc00;
+
+
+
+// Colour Guide
+.colour-guide {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  p {
+    color: $white;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .purple {
+    background-color: $purple;
+  }
+  .red {
+    background-color: $red;
+  }
+  .orange {
+    background-color: $orange;
+  }
+
+  .dark-grey {
+    background: $dark-grey;
+    color: $white;
+  }
+  .mid-grey {
+    background: $mid-grey;
+    color: $white;
+  }
+  .grey {
+    background: $grey;
+    color: $white;
+  }
+  .light-grey {
+    background: $light-grey;
+    p {
+      color: $dark-grey;
+    }
+  }
+  .white {
+    background: $white;
+    outline: 1px $light-grey solid;
+    outline-offset: -1px;
+    p {
+      color: $dark-grey;
+    }
+  }
+}

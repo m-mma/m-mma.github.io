@@ -1,0 +1,101 @@
+.maintenance {
+  background: $white;
+  background-color: $white;
+}
+.maintenance-mode {
+  color: $white;
+  background: $purple;
+  background-color: $purple;
+  h1, h2, h3, h4, h5, h6, p, ol li, ul li, span, blockquote {
+    color: $white;
+  }
+  .content--maintenance {
+    img {
+      margin: $header-margin auto;
+    }
+    a {
+      color: $orange;
+      text-decoration: none;
+      &:hover {
+        color: lighten($orange, 10%);
+      }
+      &:active {
+        color: darken($orange, 10%);
+      }
+    }
+    .contacts--maintenance {
+      margin: 0 35%;
+      background: none;
+      svg, .icon {
+        display: inline;
+        position: relative;
+        max-width: 21px;
+        margin: 0 6px 0 0;
+        top: 5px;
+      }
+    }
+  }
+
+  .text-large {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: $bold;
+    span {
+      display: block;
+      font-size: $header-size * 2.65;
+      font-weight: $heavy;
+    }
+  }
+  .text-mid {
+    text-align: center;
+    font-style: italic;
+    font-size: $header-size;
+  }
+  @media #{$laptop} {
+    .content--maintenance {
+      .contacts--maintenance {
+        margin: 0 30%;
+      }
+    }
+  }
+  @media #{$tablet} {
+    .content--maintenance {
+      .contacts--maintenance {
+        margin: 0 24%;
+      }
+    }
+  }
+  @media #{$lrg-mobile} {
+    .content--maintenance {
+      .contacts--maintenance {
+        margin: 0 auto;
+      }
+    }
+    .text-large {
+      letter-spacing: 0.063em;
+      font-size: $header-size / 1.250;
+      span {
+        font-size: $header-size * 1.625;
+      }
+    }
+  }
+  @media #{$mid-mobile} {
+    .text-large {
+      font-size: $header-size / 1.375;
+      span {
+        font-size: $header-size * 1.375;
+      }
+    }
+  }
+  @media #{$mobile} {
+    .phone-numbers {
+      a {
+        &:last-of-type {
+          display: block;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

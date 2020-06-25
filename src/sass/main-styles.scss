@@ -1,0 +1,21 @@
+// BASE
+@import "base/mixins";
+@import "base/reset";
+@import "base/grid";
+@import "base/colors";
+@import "base/typography";
+
+// COMPONENTS
+@import "components/header";
+@import "components/footer";
+@import "components/media-objects";
+
+//PAGES & SECTIONS
+@import "pages/maintenance";
+@import "pages/homepage";
+@import "pages/terms-privacy";
+
+//VENDORS
+@import "vendors/glider";
+@import "vendors/particles-js";
+@import "vendors/scroll-magic";

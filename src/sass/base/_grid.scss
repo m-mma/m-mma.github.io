@@ -1,0 +1,117 @@
+$grid-columns: 12;
+
+$grid-max-width: 90em;//1440px
+
+$sm-mobile:           "(max-width: 320px)";
+$mobile:              "(max-width: 360px)";
+$mobile-breakpoint:   "only screen and (min-width: 500px)";
+$mid-mobile:          "(max-width: 375px)";
+$lrg-mobile:          "(max-width: 500px)";
+$tablet:              "(max-width: 870px)";
+$laptop:              "(max-width: 1024px)";
+$lrg-laptop:          "only screen and (min-width: 1360px)";
+$desktop:             "only screen and (min-width: 1600px)";
+
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+// img {
+//   width: auto;
+//   max-width: 100%;
+//   height: auto !important;
+// }
+
+html,
+body {
+  z-index: 0;
+  // width: 100%;
+  @media #{$sm-mobile} {
+    // min-width: 126%;
+    // Maintain full-width on small screen sizes
+  }
+}
+body {
+  main {
+    // padding-top: 9px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+.wrapper {
+  max-width: $grid-max-width;
+  width: 95%;
+  margin: 0 auto;
+}
+.mid-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.wrapper,
+.row {
+    @include clearfix();
+}
+
+.row {
+
+  [class*='col-'] {
+    vertical-align: top;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px;
+}
+
+
+@media #{$mobile-breakpoint} {
+  // .wrapper {
+  //     width: 95%;
+  //     max-width: $grid-max-width;
+  //   }
+  .wrapper__footer {
+      // width: 95%;
+      margin: 0 auto;
+      max-width: 97%;
+    }
+  @for $i from 1 through $grid-columns {
+      .col-#{$i} {
+          width: 100% / $grid-columns * $i;
+        }
+    }
+}
+@media #{$mobile} {
+  .mid-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+
+// ----------------------------------------------------------------------
+	// Grid Demo
+// ----------------------------------------------------------------------
+
+.gridDemo {
+  // margin-bottom: 60px;
+  // * {
+  //   color: #4e2175;
+  // }
+  span {
+    display: block;
+    background: #CCCCCC;
+    color: black;
+    padding: 1em 0;
+    text-align: center;
+  }
+}
