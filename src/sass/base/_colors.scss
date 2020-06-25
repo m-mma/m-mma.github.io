@@ -1,20 +1,13 @@
-//THE DATA FACTORY BRAND COLOURS
+//9 988 Colours
 //Primary Colours
-$purple:          rgb(74,46,134);
-$red:             rgb(236,40,75);
-$orange:          rgb(242,113,35);
-$light-orange:    rgb(249,169,24);
-// $blue:            #000066;
+$black:   #000000;
 
 
 //Seondary Colours
-$dark-grey:       #333333;
+
 $grey:            #999999;
 $light-grey:      #CCCCCC;
-$mid-grey:        #808080;
-$bgd-grey:        #E8E8E8;
 
-$border-blue:     #666699;
 $white:           #FFFFFF;
 $white-smoke:     #F5F5F5;
 
@@ -23,6 +16,7 @@ $alert-red:       #cc0000;
 $alert-green:     #009933;
 $alert-blue:      #0000ff;
 $alert-yellow:    #ffcc00;
+$link-colour:     #1a0dab;
 
 
 
@@ -37,22 +31,9 @@ $alert-yellow:    #ffcc00;
     text-align: center;
     font-weight: bold;
   }
-  .purple {
-    background-color: $purple;
-  }
-  .red {
-    background-color: $red;
-  }
-  .orange {
-    background-color: $orange;
-  }
 
-  .dark-grey {
-    background: $dark-grey;
-    color: $white;
-  }
-  .mid-grey {
-    background: $mid-grey;
+  .black {
+    background: $black;
     color: $white;
   }
   .grey {
@@ -62,7 +43,7 @@ $alert-yellow:    #ffcc00;
   .light-grey {
     background: $light-grey;
     p {
-      color: $dark-grey;
+      color: $black;
     }
   }
   .white {
@@ -70,7 +51,7 @@ $alert-yellow:    #ffcc00;
     outline: 1px $light-grey solid;
     outline-offset: -1px;
     p {
-      color: $dark-grey;
+      color: $black;
     }
   }
 }
