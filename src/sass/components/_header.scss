@@ -21,11 +21,12 @@ header {
   }
 
   .logo {
+    margin-top: $paragraph-margin;
     margin-left: $paragraph-margin / 6;
     font-size: 45px;
-    font-size: $bold;
+    font-weight: $bold;
     color: $black;
-    text-align: center;
+    text-align: left;
     img, svg {
       max-width: 210px;
       margin-top: $paragraph-margin / 2;
