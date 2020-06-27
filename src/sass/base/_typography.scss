@@ -9,12 +9,10 @@
 // FONT FAMILY
 //-----------------------------------
 
-// Google Fonts
-
-$font-family           : 'Poppins', sans-serif;
+$font-family           : 'poppins', sans-serif;
 $regular                : 400;
 $bold                   : 700;
-
+// $bold-italic            : 700i;
 
 // Font Sizes
 $base-font-size: 14px;
@@ -32,10 +30,12 @@ $header-size       : rem(26px);
 $header-line-height: 1.25;
 $header-margin     : $paragraph-margin * 1.25;
 
+$link-color        : #1a0dab;
+
 $hr-margin: 27px;
 
 /// Block Quotes
-$blockquote-color      : $black;
+$blockquote-color      : $mid-grey;
 $blockquote-size       : rem(20px);
 $blockquote-line-height: 1.5em;
 $blockquote-margin     : $paragraph-margin * 1.5;
@@ -142,23 +142,18 @@ strong {
 }
 // Links
 a {
-    color:  $link-colour;
-    text-decoration: none;
+    color:  $link-color;
     font-weight:  bold;
+    text-decoration: none;
     transition: all 0.2s ease;
     &:hover {
-        color: lighten($link-colour, 10%);
-        text-decoration: underline;
+        color: $black;
+        text-decoration: none;
         transition: background-color .3s ease-out;
     }
 
-    // &:active {
-    //     color: darken($link-colour, 10%);
-    //     text-decoration: none;
-    //     cursor: pointer;
-    // }
-    .active {
-        color: darken($link-colour, 10%);
+    &:active {
+        color: darken($black, 10%);
         text-decoration: none;
         cursor: pointer;
     }

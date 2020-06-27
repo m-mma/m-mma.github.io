@@ -1,0 +1,57 @@
+.button {
+  display:  inline-block;
+  padding:  0.75em 1em;
+  margin: 0.188em;
+  background-color: $black;
+  border: 2px solid $black;
+  box-sizing: border-box;
+  text-decoration:  none;
+  font-size: $paragraph-size / 1.125;
+  font-weight:  $bold;
+  color:  $white;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  cursor: pointer;
+  &:hover {
+    color: $grey;
+    background-color: $white;
+    text-decoration: none;
+    transition: background-color .3s ease-out;
+    transition: border .1s ease-out;
+  }
+  &:active {
+    color: $grey;
+    background-color: $white;
+    border: 2px solid $white;
+    text-decoration: none;
+    transition: none;
+  }
+  @media #{$mobile} {
+    font-size: $paragraph-size / 1.35;
+  }
+  @media #{$sm-mobile} {
+    font-size: $paragraph-size / 2;
+  }
+
+}
+.active {
+  border: 2px solid $white;
+  color: $grey;
+  background-color: $white;
+  transition: none;
+  cursor: default;
+  &:hover {
+    color: $grey;
+  }
+}
+.button--secondary {
+  background-color: $light-grey;
+  border: 2px solid $light-grey;
+  &:hover {
+    color: $grey;
+  }
+}

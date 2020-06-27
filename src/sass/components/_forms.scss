@@ -1,0 +1,272 @@
+.form-container {
+  // padding-right: 0;
+  // padding-bottom: 0;
+  // padding-left: 0;
+  border: 1px $light-grey solid;
+  margin-bottom:  $paragraph-margin;
+
+  form {
+    padding: 18px;
+    .button {
+      display: block;
+      padding: 1em;
+      width: 100%;
+      margin-top:  $paragraph-margin * 1.165;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom:  $paragraph-margin * 1.165;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      margin-bottom:  $header-margin / 1.5;
+    }
+    p {
+      font-size: $paragraph-size / 1.25;
+      &:first-of-type {
+        text-align: center;
+      }
+      &:last-of-type {
+        margin-bottom:  $paragraph-margin / 2;
+      }
+    }
+    a {
+      font-size: $paragraph-size / 1.25;
+    }
+    label {
+      margin-left: 1px;
+      line-height: 1;
+    }
+    hr {
+      margin: $hr-margin / 2  0;
+    }
+    .input-error {
+      border-color: #FF0000;
+    }
+    .validation-text {
+      font-size: $paragraph-size / 1.25;
+    }
+    .toggle-password {
+      margin-bottom: 12px;
+      font-size: $paragraph-size / 1.35;
+      span {
+        position: relative;
+        margin-top: -2px;
+      }
+    }
+    input[type=text], input[type=password], input[type=number] {
+      width: 100%;
+      padding: 12px;
+      margin: 6px 0 9px 0;
+      display: inline-block;
+      border: none;
+      background: $white;
+      border: 1px $mid-grey solid;
+    }
+
+    input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+      background-color: $white-smoke;
+      border: 1px $grey solid;
+    }
+    input[type=checkbox] {
+      background-color: $white;
+    }
+    .login-link {
+      p {
+        font-weight: $bold;
+        text-align: center;
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+
+  .desktop-login {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+    // background-color: $white;
+    // padding-bottom: 0;
+    display: block;
+    color: $white;
+    border: none;
+
+    input[type=text], input[type=password], input[type=number], input[type=checkbox]{
+      // float: left;
+      width: 90%;
+      margin-bottom: 0;
+      padding: 10px;
+      // margin-right: 1em;
+    }
+
+    a {
+      font-size: $paragraph-size / 1.125;
+    }
+    .form-field {
+      width: 28%;
+      display: inline-block;
+      float: left;
+    }
+    .form-submission, .form-link {
+      margin-top: 0.250em;
+    }
+    .form-submission {
+      float: left;
+      width: auto;
+    }
+    .form-link {
+      float: right;
+      width: auto;
+    }
+    .form-link {
+      .button {
+        // padding: 1.25em;
+      }
+    }
+    .validation-text {
+      margin-top: 0.625em;
+      margin-right: 15px;
+    }
+  }
+
+  .mobile-view-links {
+    padding: 0;
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+    background-color: $white;
+    border: none;
+    .button {
+      width: 45%;
+      float: left;
+      margin-top: 0;
+      // margin: 0 5% 0 0;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+        float: right;
+
+      }
+    }
+  }
+
+  .verification-form {
+
+    .button {
+      margin-bottom:  $paragraph-margin / 3;
+    }
+  }
+  @media #{$tablet:} {
+    .desktop-login {
+        display: none;
+    }
+    .mobile-view-links {
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  // @media #{$mobile-breakpoint:} {
+  //   .desktop-login {
+  //       display: block;
+  //   }
+  //   .mobile-view-links {
+  //     display: none;
+  //   }
+  // }
+  @media #{$lrg-mobile} {
+    form {
+      padding: 18px 12px;
+    }
+    .mobile-view-links {
+      margin-top: -5px;
+    }
+  }
+  @media #{$mobile} {
+    form {
+      input[type=text], input[type=password], input[type=number] {
+        padding: 8px;
+        margin: 3px 0;
+      }
+      .button {
+        margin: 0;
+        // margin-top:  $paragraph-margin / 1.5;
+        // margin-right: 0;
+        // margin-left: 0;
+        // margin-bottom:  $paragraph-margin / 1.5;
+      }
+      .validation-text {
+        margin-top: 3px;
+        font-size: $paragraph-size / 1.35;
+      }
+      .login-link {
+        p {
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+    .mobile-view-links {
+      display: block;
+      margin-top: -10px;
+      .button {
+        // margin-top: 1em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media #{$sm-mobile} {
+    form {
+      input[type=text], input[type=password], input[type=number] {
+        padding: 6px 8px;
+        margin: 0 0 3px 0;
+      }
+      label {
+        font-size: $paragraph-size / 1.5;
+      }
+      .validation-text {
+        font-size: $paragraph-size / 1.5;
+      }
+      .login-link {
+        p, a {
+        font-size: $paragraph-size / 1.5;
+        text-align: center;
+        }
+      }
+    }
+    .mobile-view-links {
+      // margin-top: 0.350em;
+      .button {
+        width: 48%;
+      }
+    }
+  }
+}
+
+.change-password, .withdraw-funds {
+  border: none;
+  background-color: $white-smoke;
+  form {
+    padding-top: 0;
+  }
+}
+.withdraw-funds  {
+
+  form {
+    p {
+      font-size: $paragraph-size;
+
+      &:first-of-type {
+        margin-bottom: $paragraph-margin;
+        text-align: left;
+        font-weight: $bold;
+      }
+    }
+  }
+}

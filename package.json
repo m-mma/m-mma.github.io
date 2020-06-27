@@ -1,8 +1,8 @@
 {
   "name": "m-mma.github.io",
   "version": "1.0.0",
-  "description": "Mulika 988",
-  "main": "index.js",
+  "description": "988",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

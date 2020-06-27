@@ -176,8 +176,153 @@
           </div>
           <hr>
         </div>
-
       </section>
+
+      <section>
+        <div class="wrapper">
+          <div class="row">
+            <h2>Buttons</h2>
+            <div class="col-12">
+              <div class="col-3">
+                <a href="#primary-button-demo" class="button" id="primary-button-demo" name="button" aria-label="primary button">Primary Button</a>
+            </div>
+            <div class="col-3">
+              <a href="#secondary-button-demo" class="button button--secondary" id="secondary-button-demo" name="secondary button" aria-label="secondary button">Secondary Button</a>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+        <hr>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <div class="row">
+            <h2>Forms</h2>
+            <div class="col-12">
+              <div class="col-4">
+                <h2>Registration</h2>
+                  <div class="form-container">
+                  <form class="" action="" name="registrationForm" method="POST" onsubmit="return(validateRegistration())">
+                     <h1 class="centered-text">Register Now</h1>
+                     <p>Please fill in the form below to create your account</p>
+                     <hr>
+
+                     <label for="phone-number">Mobile Phone Number:</label>
+                     <input type="text" name="phoneNumber" style="font-size:16px; font-weight:bold;">
+                     <div id="phone-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                     <label for="create-password">Create a Password:</label>
+                     <input type="password" name="newPassword" id="create-password-input" style="font-size:16px; font-weight:bold;">
+                     <div id="create-pwd-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                     <label for="repeat-password">Repeat Password:</label>
+                     <input type="password" name="repeatPassword" id="create-password-input-repeat" style="font-size:16px; font-weight:bold;">
+                     <div id="repeat-pwd-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                    <div class="toggle-password" style="font-size:12px;">
+                      <input type="checkbox" onclick="togglePassword()" style="width:18px; height:18px;"> <span style="position: relative; top:-1px; font-size:12px; margin-left:2px;">Show Password</span>
+                    </div>
+
+                    <p>By clicking on the 'Join Now' button, you confirm that you are over 18 years old and have read our  <a href="#">Responsible Betting Policy</a> and accepted our  <a href="#">Terms and Conditions</a>.</p>
+                    <input type="submit" class="button" value="Join Now">
+
+                   <hr>
+                   <div class="login-link">
+                     <p>Already have an account? <a href="#">Log in</a></p>
+                   </div>
+                 </form>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <h2>Login</h2>
+                  <div class="form-container">
+                    <form class="login-form" action=" " name="loginForm" method="POST" onsubmit="return(validateLogin())">
+                       <h2 class="centered-text">Log In</h2>
+                       <p>Please enter your Phone Number and Password </p>
+                       <hr>
+
+                       <label for="phone-number">Mobile Phone Number:</label>
+                       <input type="text" name="phoneNumber" style="font-size:16px; font-weight:bold;">
+                       <div id="login-phone-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                       <label for="enter-password">Password:</label>
+                       <input type="password" name="enterPassword" id="login-password-input" style="font-size:16px; font-weight:bold;">
+                       <div id="login-pwd-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                       <div class="toggle-password" style="font-size:12px;">
+                         <input type="checkbox" onclick="toggleLoginPassword()" style="width:18px; height:18px;"> <span style="position: relative; top:-1px; font-size:12px; margin-left:2px;">Show Password</span>
+                       </div>
+
+                       <p><a href="#">Forgot your password?</a></p>
+
+                      <input type="submit" class="button" value="Log in">
+
+                     <hr>
+                     <div class="login-link">
+                       <p>Don't have an account? <a href="#">Join Now</a></p>
+                     </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <h2>Password Reset</h2>
+                <div class="form-container">
+                  <form action=" " class="verification-form" name="resetPwdForm" method="POST" onsubmit="return(validateResetPwd())">
+                     <h2 class="centered-text">Reset Your Password</h2>
+                     <p>Please enter your mobile phone number to continue </p>
+                     <hr>
+                     <label for="mobile-phone-number">Your Mobile Phone Number:</label>
+                     <input type="text" name="registeredPhoneNumber" id="phone-number-input" style="font-size:16px; font-weight:bold;">
+                     <div id="phone-number-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                    <input type="submit" class="button" value="Reset My Password">
+                </form>
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <div class="row">
+          <h2 class="text-center">Account Settings</h2>
+          <div class="col-4">
+              <div class="form-container">
+                <form action=" " class="verification-form" name="changPwdForm" method="POST" onsubmit="return(validateNewPwd())">
+                   <h3 class="centered-text">Change Your Password</h3>
+                   <p>Please enter a new password below </p>
+                   <hr>
+                   <label for="current-password">Enter Your Current Password:</label>
+                   <input type="password" name="enterPassword" id="current-password-input" style="font-size:16px; font-weight:bold;">
+                   <div id="current-pwd-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                   <label for="new-password">Enter Your New Password:</label>
+                   <input type="password" name="newPassword" id="confirm-new-password-input" style="font-size:16px; font-weight:bold;">
+                   <div id="enter-new-pwd-validation" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                   <label for="confirm-password">Confirm New Password:</label>
+                   <input type="password" name="repeatNewPassword" id="confirm-new-password-input-repeat" style="font-size:16px; font-weight:bold;">
+                   <div id="new-pwd-validation-repeat" class="validation-text" align="left" style="color:#FF0000; margin-bottom:12px; line-height: 1.25;"> </div>
+
+                   <div class="toggle-password" style="font-size:12px;">
+                     <input type="checkbox" onclick="toggleNewPwd()" style="width:18px; height:18px;"> <span style="position: relative; top:-1px; font-size:12px; margin-left:2px;">Show Password</span>
+                   </div>
+
+                  <input type="submit" class="button" value="Update Password">
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section>
         <div class="wrapper">
@@ -259,19 +404,10 @@
     </div>
 
   </footer>
+<script src="../dist/js/all-js-min.js"></script>
 
-  <!-- Service Worker start -->
-  <!-- <script>
-    if ('serviceWorker' in navigator) {
-      console.log("Register service worker");
-      navigator.serviceWorker.register('service-worker.js').then(function(reg) {
-        console.log("service worker registered successfully");
-      }).catch(function(err) {
-        console.log("service worker failed ", err)
-      });
-    }
-  </script> -->
-  <!-- End Service Worker -->
+
+
 
 </body>
 
